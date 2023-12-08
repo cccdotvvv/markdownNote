@@ -8,7 +8,16 @@
 
 ## 2. msys2配置
 
-# 等待后续添加此部分内容
+1. msys2的版本选择
+
+    msys2有很多个子环境，一般选择UCRT64比较好
+    
+    ![Alt text](image-4.png)
+
+
+2. 安装minGW64
+
+    pacman -S mingw-w64-ucrt-x86_64-toolchain
 
 ## 3. vscode需要安装的插件及其配置
 

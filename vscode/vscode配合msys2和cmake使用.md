@@ -3,7 +3,6 @@
 ## 1. 需要安装的东西
 
 * vscode 官网下载安装即可
-* cmake 官网下载安装即可
 * msys2 官网下载安装即可
 
 ## 2. msys2配置
@@ -17,7 +16,20 @@
 
 2. 安装minGW64
 
+    ~~~
     pacman -S mingw-w64-ucrt-x86_64-toolchain
+    ~~~
+
+3. 安装CMake+ninja
+    ninja可以加速编译
+    ~~~
+    pacman -S mingw-w64-ucrt-x86_64-cmake
+    pacman -S mingw-w64-ucrt-x86_64-ninja
+    ~~~
+
+4. 将msys2添加到path变量（*这样后文的vscode的c++相关的插件安装之后无需进行任何额外的设置即可*）
+
+    ![Alt text](image-5.png)
 
 ## 3. vscode需要安装的插件及其配置
 
@@ -25,7 +37,6 @@
 
     ![Alt text](image.png)
 
-    ![Alt text](image-1.png)
 
 2. CMake Tools配置
 
@@ -39,7 +50,7 @@
 
 3. C/C++ Extension Pack配置
 
-    改插件无需要手动配置，会自动进行配置的
+    该插件无需要手动配置，会自动进行配置的
 
 ## 4. vscode的tasks.json和launch.json配置
 

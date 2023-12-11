@@ -40,17 +40,19 @@
 
 2. CMake Tools配置
 
-    配置如下图选项
+    * 配置如下图选项（如果msys2已经添加到环境变量则无需配置此项）
     
-    ![Alt text](image-2.png)
+        ![Alt text](image-2.png)
 
-    以及如下图选项
+    * 配置如下图选项（如果msys2已经添加到环境变量则无需配置此项）
 
-    ![Alt text](image-3.png)
+        ![Alt text](image-3.png)
 
 3. C/C++ Extension Pack配置
 
-    该插件无需要手动配置，会自动进行配置的
+    该插件是一个整合包，主要需要配置的是c++ tools，关于各个选项的官方文档：https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
+
+    * 如果需要使用cpp-tools的inlellisense则需要将`configurationProvider`设置成`ms-vscode.cmake-tools`
 
 ## 4. vscode的tasks.json和launch.json配置
 

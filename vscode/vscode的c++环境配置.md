@@ -1,4 +1,6 @@
-# vscode配置cmake和msys2的环境
+# vscode的c++环境配置
+
+    本文选择vscode + msys2 + cmake + clangd的配置
 
 ## 1. 需要安装的东西
 
@@ -33,7 +35,7 @@
 
 ## 3. vscode需要安装的插件及其配置
 
-1. vscodevs安装CMake Tools和C/C++ Extension Pack插件
+1. vscodevs安装clangd、CMake Tools和C/C++ Extension Pack插件
 
     ![Alt text](image.png)
 
@@ -53,6 +55,15 @@
     该插件是一个整合包，主要需要配置的是c++ tools，关于各个选项的官方文档：https://code.visualstudio.com/docs/cpp/c-cpp-properties-schema-reference
 
     * 如果需要使用cpp-tools的inlellisense则需要将`configurationProvider`设置成`ms-vscode.cmake-tools`
+
+4. clangd配置
+
+    clangd需要设置你使用的编译器的位置、compile_command.json的位置以及一些其他的设置，如下图
+
+    ![Alt text](image-1.png)
+
+    生成compile_command.json需要在CMakeLists.txt中新增`set(CMAKE_EXPORT_COMPILE_COMMANDS ON)`
+
 
 ## 4. vscode的tasks.json和launch.json配置
 

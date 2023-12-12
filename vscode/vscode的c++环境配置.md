@@ -58,11 +58,18 @@
 
 4. clangd配置
 
-    clangd需要设置你使用的编译器的位置、compile_command.json的位置以及一些其他的设置，如下图
+    * 代码静态分析相关的设置
+        clangd需要设置你使用的编译器的位置、compile_command.json的位置以及一些其他的设置，如下图
 
-    ![Alt text](image-1.png)
+        ![Alt text](image-1.png)
 
-    生成compile_command.json需要在CMakeLists.txt中新增`set(CMAKE_EXPORT_COMPILE_COMMANDS ON)`
+        生成compile_command.json需要在CMakeLists.txt中新增`set(CMAKE_EXPORT_COMPILE_COMMANDS ON)`
+    
+    * clang-format相关的设置
+
+        注意：需要将clang和clang-format的路径添加到系统的环境变量才可以在windows的命令行执行命令。
+
+        在命令行执行`clang-format -style=Google -dump-config > .clang-format`则可以生成Google风格的代码样式。生成后必须将其编码变成UTF8才可以正常的使用该文件。
 
 
 ## 4. vscode的tasks.json和launch.json配置
